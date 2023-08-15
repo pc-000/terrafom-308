@@ -53,7 +53,7 @@ module "blog_security_group" {
 //vpc_id = data.aws_vpc.default.id
 
   name    = "blog_new"
-  vpc_id = module.vpc.public_subnets[0]
+  vpc_id = module.vpc.public_subnets[0].vpc_id
 
   ingress_rules       = ["http-80-tcp","https-443-tcp"]
   ingress_cidr_blocks = ["0.0.0.0/0"]
