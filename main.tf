@@ -49,6 +49,8 @@ resource "aws_instance" "blog" {
   tags = {
     Name = "Bitnami"
   }
+
+  key_name = "bitnami-key
 }
 
 module "blog_security_group" {
@@ -60,7 +62,7 @@ vpc_id = data.aws_vpc.default.id
   name    = "blog_new"
   //vpc_id = module.vpc.vpc_id
 
-  ingress_rules       = ["http-80-tcp","https-443-tcp"]
+  ingress_rules       = ["http-80-tcp","https-443-tcp", "ssh-tcp"]
   ingress_cidr_blocks = ["0.0.0.0/0"]
 
   egress_rules       = ["all-all"]
