@@ -49,7 +49,6 @@ resource "aws_instance" "blog" {
   tags = {
     Name = "Bitnami"
   }
-
   key_name = "bitnami-key
 }
 
