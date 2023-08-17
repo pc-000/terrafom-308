@@ -49,7 +49,7 @@ resource "aws_instance" "blog" {
   tags = {
     Name = "Bitnami"
   }
-  key_name = "bitnami-key
+  key_name = "bitnami-key"
 }
 
 module "blog_security_group" {
